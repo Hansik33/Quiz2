@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <None Remove="Icons\brain.png" />
+    <None Remove="Icons\informations.png" />
+    <None Remove="Icons\qanda.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\brain.png" />
+    <Resource Include="Icons\informations.png" />
+    <Resource Include="Icons\qanda.png" />
   </ItemGroup>
 
 </Project>

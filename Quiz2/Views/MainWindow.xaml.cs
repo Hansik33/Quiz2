@@ -1,15 +1,19 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 
 namespace Quiz2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TurnOffApplicationClosingWindow(object obj, CancelEventArgs e)
+        {
+            e.Cancel = true;
+            Application.Current.Shutdown();
         }
     }
 }

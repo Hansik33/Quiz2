@@ -4,8 +4,92 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ContentControl Content="{Binding CurrentPageViewModel}" />
-    </Grid>
+        Title="Menu główne"
+        Height="300"
+        Width="300"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Closing="TurnOffApplicationClosingWindow">
+    <Window.Resources>
+        <Style x:Key="MainWindowMenuButtonsStyle"
+               TargetType="Button">
+            <Setter Property="Background" Value="#343434" />
+            <Setter Property="Width" Value="250" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="White"
+                                BorderThickness="0.5"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#454545" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="#454545">
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Image Width="50"
+                    Source="/Icons/brain.png" />
+                <TextBlock Text="Quiz"
+                   Foreground="White"
+                   FontFamily="Calibri"
+                   TextAlignment="Center"
+                   FontSize="32"
+                   FontWeight="DemiBold"
+                   Padding="0,20,0,20"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center" />
+                <TextBlock Text="2"
+                           Foreground="#d9534f"
+                   FontFamily="Calibri"
+                   TextAlignment="Center"
+                   FontSize="16"
+                   Padding="0,20,0,0"
+                   FontWeight="DemiBold"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center" />
+            </StackPanel>
+            <Button Command="{Binding StartGameCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                <Button.Content>
+                    <TextBlock Text="Graj"
+                               FontSize="16"
+                               Foreground="White" />
+                </Button.Content>
+            </Button>
+            <Button Command="{Binding ShowApplicationInfoCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                <Button.Content>
+                    <TextBlock Text="O aplikacji"
+                               FontSize="16"
+                               Foreground="White" />
+                </Button.Content>
+            </Button>
+            <Button Command="{Binding TurnOffApplicationCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                <Button.Content>
+                    <TextBlock Text="Wyjście"
+                               FontSize="16"
+                               Foreground="White" />
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </StackPanel>
 </Window>

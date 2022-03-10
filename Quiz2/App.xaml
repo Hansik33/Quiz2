@@ -4,8 +4,8 @@
              xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
              xmlns:views="clr-namespace:Quiz2.Views">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type viewmodels:UserControl1ViewModel}">
-            <views:UserControl1 />
+        <DataTemplate DataType="{x:Type viewmodels:ChangeCategoryViewModel}">
+            <views:ChangeCategoryView />
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodels:UserControl2ViewModel}">
             <views:UserControl2 />

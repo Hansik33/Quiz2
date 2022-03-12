@@ -8,19 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Icons\brain.png" />
-    <None Remove="Icons\informations.png" />
-    <None Remove="Icons\qanda.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Icons\brain.png" />
-    <Resource Include="Icons\informations.png" />
-    <Resource Include="Icons\qanda.png" />
   </ItemGroup>
 
 </Project>

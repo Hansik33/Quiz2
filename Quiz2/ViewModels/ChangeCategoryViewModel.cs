@@ -30,11 +30,11 @@ namespace Quiz2.ViewModels
             if (DoesExistNonEmptyQuestionsFolder())
             {
                 NumberFiles = CheckNumberFilesInFolder();
-
                 for (int i = 0; i < NumberFiles; i++)
                 {
                     NamesFiles.Add(Directory.GetFiles(pathQuestions)[i]);
-                    CategoryName = File.ReadLines(NamesFiles[i]).First();
+                    var allFileText = File.ReadAllText(NamesFiles[i]);
+                    //
                     Buttons.Add(new ButtonsProperties()
                     {
                         Content = CategoryName

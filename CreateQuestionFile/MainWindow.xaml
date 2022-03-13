@@ -21,13 +21,15 @@
                HorizontalAlignment="Center"
                Margin="5" />
         <TextBox x:Name="CategoryTitleTextBox"
-                 Margin="5" />
+                 Margin="5"
+                 TextAlignment="Center" />
         <Label Content="Podaj treść pytania: "
                FontSize="32"
                HorizontalAlignment="Center"
                Margin="5" />
         <TextBox x:Name="QuestionTextBox"
-                 Margin="5" />
+                 Margin="5"
+                 TextAlignment="Center" />
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
@@ -39,8 +41,10 @@
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerATextBox"
-                         Margin="5" />
+                         Margin="5"
+                         TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerACorrectCheckBox"
+                          Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
             </StackPanel>
@@ -52,8 +56,10 @@
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerBTextBox"
-                         Margin="5" />
+                         Margin="5"
+                         TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerBCorrectCheckBox"
+                          Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
             </StackPanel>
@@ -65,8 +71,10 @@
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerCTextBox"
-                         Margin="5" />
+                         Margin="5"
+                         TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerCCorrectCheckBox"
+                          Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
             </StackPanel>
@@ -78,8 +86,10 @@
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerDTextBox"
-                         Margin="5" />
+                         Margin="5"
+                         TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerDCorrectCheckBox"
+                          Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
             </StackPanel>
@@ -92,7 +102,7 @@
                 Click="AddNextQuestion"
                 Margin="5">
             <Button.Content>
-                <Label Content="Następne pytanie"
+                <Label Content="Dodaj pytanie"
                        FontSize="24" />
             </Button.Content>
         </Button>
@@ -101,7 +111,7 @@
                HorizontalAlignment="Center"
                FontSize="20" />
         <Button x:Name="CreateFileButton"
-                Click="CreateFileCategory"
+                Click="CreateCategoryFile"
                 Margin="20">
             <Button.Content>
                 <Label Content="Utwórz plik"

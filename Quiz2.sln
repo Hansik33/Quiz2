@@ -5,7 +5,12 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quiz2", "Quiz2\Quiz2.csproj", "{88CFD0A9-58F1-4702-8304-47546CEAB155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateQuestionFile", "CreateQuestionFile\CreateQuestionFile.csproj", "{60CE7FA1-F26E-4474-BD98-A79CBA18257E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateQuestionFile", "CreateQuestionFile\CreateQuestionFile.csproj", "{60CE7FA1-F26E-4474-BD98-A79CBA18257E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{A34EEE39-ABA4-48CF-9B65-E06A9913CC5F}"
+	ProjectSection(SolutionItems) = preProject
+		Quiz2\Models\CategoryFileModel.cs = Quiz2\Models\CategoryFileModel.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

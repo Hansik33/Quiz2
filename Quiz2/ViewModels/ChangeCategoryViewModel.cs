@@ -1,4 +1,5 @@
-﻿using Quiz2.Commands;
+﻿using Newtonsoft.Json;
+using Quiz2.Commands;
 using Quiz2.Interfaces;
 using Quiz2.Models;
 using Quiz2.Patterns;
@@ -34,7 +35,8 @@ namespace Quiz2.ViewModels
                 {
                     NamesFiles.Add(Directory.GetFiles(pathQuestions)[i]);
                     var allFileText = File.ReadAllText(NamesFiles[i]);
-                    //
+                    CategoryFileModel categoryModel = JsonConvert.DeserializeObject<CategoryFileModel>(allFileText);
+                    CategoryName = categoryModel.Informations.CategoryTitle;
                     Buttons.Add(new ButtonsProperties()
                     {
                         Content = CategoryName
@@ -114,7 +116,7 @@ namespace Quiz2.ViewModels
 
         public class ButtonsProperties
         {
-            public string? Content { get; set; }
+            public string Content { get; set; }
         }
 
         private ICommand _goTo2;

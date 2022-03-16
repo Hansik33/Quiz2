@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Quiz2.ViewModels
 {
-    public class GameWindowViewModel : BaseViewModel
+    internal class GameWindowViewModel : BaseViewModel
     {
         public GameWindowViewModel()
         {
@@ -40,7 +40,7 @@ namespace Quiz2.ViewModels
             set
             {
                 _currentPageViewModel = value;
-                OnPropertyChanged("CurrentPageViewModel");
+                OnPropertyChanged(nameof(CurrentPageViewModel));
             }
         }
 

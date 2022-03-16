@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Quiz2.Models
+namespace CreateQuestionFile.Models
 {
     internal class CategoryFileModel
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Quiz2.Commands.CommandBase
+namespace CreateQuestionFile.Commands.CommandBase
 {
     internal static class EventRaiser
     {

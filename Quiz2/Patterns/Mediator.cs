@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Quiz2.Patterns
 {
-    public static class Mediator
+    internal static class Mediator
     {
         private static IDictionary<string, List<Action<object>>> pl_dict =
            new Dictionary<string, List<Action<object>>>();

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 
-namespace Quiz2.ViewModels.ViewModelBase
+namespace CreateQuestionFile.ViewModelBase
 {
     internal abstract class BaseViewModel : INotifyPropertyChanged
     {

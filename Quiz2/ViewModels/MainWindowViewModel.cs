@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace Quiz2.ViewModels
 {
-    public class MainWindowViewModel
+    internal class MainWindowViewModel
     {
         public MainWindowViewModel()
         {

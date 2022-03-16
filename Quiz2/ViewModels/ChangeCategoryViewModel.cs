@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace Quiz2.ViewModels
 {
-    public class ChangeCategoryViewModel : BaseViewModel, IPageViewModel
+    internal class ChangeCategoryViewModel : BaseViewModel, IPageViewModel
     {
         public ChangeCategoryViewModel()
         {
@@ -21,8 +21,8 @@ namespace Quiz2.ViewModels
 
         private bool DoesExistNonEmptyQuestionsFolder()
         {
-            if (Directory.Exists(pathQuestions)
-                && Directory.EnumerateFileSystemEntries(pathQuestions).Any()) return true;
+            if (Directory.Exists(PathQuestions)
+                && Directory.EnumerateFileSystemEntries(PathQuestions).Any()) return true;
             else return false;
         }
 
@@ -33,19 +33,19 @@ namespace Quiz2.ViewModels
                 NumberFiles = CheckNumberFilesInFolder();
                 for (int i = 0; i < NumberFiles; i++)
                 {
-                    NamesFiles.Add(Directory.GetFiles(pathQuestions)[i]);
+                    NamesFiles.Add(Directory.GetFiles(PathQuestions)[i]);
                     var allFileText = File.ReadAllText(NamesFiles[i]);
                     CategoryFileModel categoryModel = JsonConvert.DeserializeObject<CategoryFileModel>(allFileText);
                     CategoryName = categoryModel.Informations.CategoryTitle;
                     Buttons.Add(new ButtonsProperties()
                     {
                         Content = CategoryName
-                    });
+                });
                 }
             }
             else
             {
-                MessageBox.Show("Nie znaleziono folderu z pytaniami lub jest on pusty." +
+                MessageBox.Show("Nie znaleziono folderu z pytaniami lub jest on pusty!" +
                     "\nZalecana jest reinstalacja oprogramowania.",
                     "Błąd krytyczny", MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
@@ -54,7 +54,7 @@ namespace Quiz2.ViewModels
 
         private int CheckNumberFilesInFolder()
         {
-            var NumberFiles = Directory.GetFiles(pathQuestions, "*", SearchOption.TopDirectoryOnly).Length;
+            var NumberFiles = Directory.GetFiles(PathQuestions, "*", SearchOption.TopDirectoryOnly).Length;
 
             return NumberFiles;
         }
@@ -66,7 +66,7 @@ namespace Quiz2.ViewModels
             set
             {
                 model.Buttons = value;
-                OnPropertyChanged("Buttons");
+                OnPropertyChanged(nameof(Buttons));
             }
         }
 
@@ -77,7 +77,7 @@ namespace Quiz2.ViewModels
             set
             {
                 model.NamesFiles = value;
-                OnPropertyChanged("NamesFiles");
+                OnPropertyChanged(nameof(NamesFiles));
             }
         }
 
@@ -88,7 +88,7 @@ namespace Quiz2.ViewModels
             set
             {
                 model.CategoryName = value;
-                OnPropertyChanged("CategoryName");
+                OnPropertyChanged(nameof(CategoryName));
             }
         }
 
@@ -99,18 +99,18 @@ namespace Quiz2.ViewModels
             set
             {
                 model.NumberFiles = value;
-                OnPropertyChanged("NumberFiles");
+                OnPropertyChanged(nameof(NumberFiles));
             }
         }
 
-        public string pathQuestions
+        public string PathQuestions
         {
-            get => model.pathQuestions;
+            get => model.PathQuestions;
 
             set
             {
-                model.pathQuestions = value;
-                OnPropertyChanged("pathQuestions");
+                model.PathQuestions = value;
+                OnPropertyChanged(nameof(PathQuestions));
             }
         }
 

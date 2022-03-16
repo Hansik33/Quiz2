@@ -3,19 +3,19 @@ using static Quiz2.ViewModels.ChangeCategoryViewModel;
 
 namespace Quiz2.Models
 {
-    public class ChangeCategoryModel
+    internal class ChangeCategoryModel
     {
-        private string _pathQuestions = @"questions";
+        private string _PathQuestions = @"questions";
 
-        public string pathQuestions
+        public string PathQuestions
         {
-            get { return _pathQuestions; }
-            set { _pathQuestions = value; }
+            get => _PathQuestions; 
+            set => _PathQuestions = value; 
         }
 
         public int NumberFiles { get; set; }
 
-        public string? CategoryName { get; set; }
+        public string CategoryName { get; set; }
 
         public ObservableCollection<ButtonsProperties> Buttons { get; set; } = new ObservableCollection<ButtonsProperties>();
 

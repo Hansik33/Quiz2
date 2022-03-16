@@ -1,8 +1,8 @@
-﻿using Quiz2.Commands.CommandBase;
+﻿using CreateQuestionFile.Commands.CommandBase;
 using System;
 using System.Windows.Input;
 
-namespace Quiz2.Commands
+namespace CreateQuestionFile.Commands
 {
     internal class RelayCommand<T> : ICommand
     {

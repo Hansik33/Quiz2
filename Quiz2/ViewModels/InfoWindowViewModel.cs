@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace Quiz2.ViewModels
 {
-    public class InfoWindowViewModel : BaseViewModel
+    internal class InfoWindowViewModel : BaseViewModel
     {
         public InfoWindowViewModel()
         {
@@ -25,7 +25,7 @@ namespace Quiz2.ViewModels
             set
             {
                 model.Informations = value;
-                OnPropertyChanged("Informations");
+                OnPropertyChanged(nameof(Informations));
             }
         }
 
@@ -36,7 +36,7 @@ namespace Quiz2.ViewModels
             set
             {
                 model.Website = value;
-                OnPropertyChanged("Website");
+                OnPropertyChanged(nameof(Webiste));
             }
         }
 

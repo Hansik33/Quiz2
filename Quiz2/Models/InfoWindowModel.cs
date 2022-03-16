@@ -1,6 +1,6 @@
 ﻿namespace Quiz2.Models
 {
-    public class InfoWindowModel
+    internal class InfoWindowModel
     {
         private string _website = "https://www.hansik.pl";
 

@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace Quiz2.ViewModels
 {
-    public class UserControl2ViewModel : BaseViewModel, IPageViewModel
+    internal class UserControl2ViewModel : BaseViewModel, IPageViewModel
     {
         private ICommand _goTo1;
 

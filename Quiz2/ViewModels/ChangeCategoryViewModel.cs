@@ -48,7 +48,7 @@ namespace Quiz2.ViewModels
                 MessageBox.Show("Nie znaleziono folderu z pytaniami lub jest on pusty!" +
                     "\nZalecana jest reinstalacja oprogramowania.",
                     "Błąd krytyczny", MessageBoxButton.OK, MessageBoxImage.Error);
-                Application.Current.Shutdown();
+                System.Environment.Exit(0);
             }
         }
 

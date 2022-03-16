@@ -154,8 +154,7 @@ namespace CreateQuestionFile.ViewModels
         {
             MessageBox.Show("Twój plik kategorii został dodany do gry!", "Sukces",
                 MessageBoxButton.OK, MessageBoxImage.Information);
-
-            Application.Current.Shutdown();
+            System.Environment.Exit(0);
         }
 
         private void AddNextQuestion(object obj)

@@ -5,7 +5,6 @@ using Quiz2.Models;
 using Quiz2.Patterns;
 using Quiz2.ViewModels.ViewModelBase;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Windows;
@@ -41,7 +40,7 @@ namespace Quiz2.ViewModels
                     Buttons.Add(new ButtonsProperties()
                     {
                         Content = CategoryName
-                });
+                    });
                 }
             }
             else

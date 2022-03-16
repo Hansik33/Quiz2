@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using static Quiz2.ViewModels.ChangeCategoryViewModel;
 
 namespace Quiz2.Models
@@ -10,8 +9,8 @@ namespace Quiz2.Models
 
         public string QuestionsPath
         {
-            get => _QuestionsPath; 
-            set => _QuestionsPath = value; 
+            get => _QuestionsPath;
+            set => _QuestionsPath = value;
         }
 
         public int NumberFiles { get; set; }

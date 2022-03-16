@@ -6,7 +6,6 @@ using Quiz2.Patterns;
 using Quiz2.ViewModels.ViewModelBase;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Quiz2.ViewModels
@@ -27,7 +26,7 @@ namespace Quiz2.ViewModels
                 CategoryTitle = categoryTitle.ToString();
             }
 
-            var namesFilesList  = new List<string>(changeCategoryViewModel.NamesFiles);
+            var namesFilesList = new List<string>(changeCategoryViewModel.NamesFiles);
 
             for (int i = 0; i < namesFilesList.Count; i++)
             {
@@ -48,7 +47,6 @@ namespace Quiz2.ViewModels
 
         private void GetValuesFromJSON()
         {
-            
         }
 
         public string QuestionsFilePath
@@ -71,7 +69,7 @@ namespace Quiz2.ViewModels
             }
         }
 
-        ChangeCategoryViewModel changeCategoryViewModel = new ChangeCategoryViewModel();
+        private ChangeCategoryViewModel changeCategoryViewModel = new ChangeCategoryViewModel();
 
         private ICommand _GoToChangeCategoryView;
 
@@ -86,6 +84,6 @@ namespace Quiz2.ViewModels
             }
         }
 
-        GameModel model = new GameModel();
+        private GameModel model = new GameModel();
     }
 }

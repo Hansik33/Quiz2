@@ -1,13 +1,4 @@
-﻿using CreateQuestionFile.Models;
-using CreateQuestionFile.ViewModels;
-using Newtonsoft.Json;
-using Quiz2.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
+﻿using CreateQuestionFile.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 

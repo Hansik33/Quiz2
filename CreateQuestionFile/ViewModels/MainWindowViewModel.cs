@@ -2,24 +2,18 @@
 using CreateQuestionFile.ViewModelBase;
 using Newtonsoft.Json;
 using Quiz2.Commands;
-using Quiz2.Models;
-using Quiz2.Views;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Input;
 
 namespace CreateQuestionFile.ViewModels
 {
     internal class MainWindowViewModel : BaseViewModel
     {
         public MainWindowViewModel()
-        { 
+        {
             CreateCategoryFileCommand = new RelayCommand(CreateCategoryFile);
             AddNextQuestionCommand = new RelayCommand(AddNextQuestion);
         }
@@ -104,7 +98,6 @@ namespace CreateQuestionFile.ViewModels
             IsAnswerBCorrectCheckBoxIsChecked = false;
             IsAnswerCCorrectCheckBoxIsChecked = false;
             IsAnswerDCorrectCheckBoxIsChecked = false;
-
         }
 
         private void AddNewPackage()
@@ -185,13 +178,13 @@ namespace CreateQuestionFile.ViewModels
             {
                 if (NumberQuestionNumber > 0)
                 {
-                        AssignCategoryValuesToVariables();
+                    AssignCategoryValuesToVariables();
 
-                        CreateFileName();
+                    CreateFileName();
 
-                        SerializeAndCreateCategoryFile();
+                    SerializeAndCreateCategoryFile();
 
-                        InformAboutDone();
+                    InformAboutDone();
                 }
                 else MessageBox.Show("Liczba pytań musi być większa od zera!", "Błąd",
                         MessageBoxButton.OK, MessageBoxImage.Error);
@@ -444,7 +437,6 @@ namespace CreateQuestionFile.ViewModels
                 OnPropertyChanged(nameof(NumberQuestionText));
             }
         }
-
 
         public RelayCommand AddNextQuestionCommand { get; set; }
 

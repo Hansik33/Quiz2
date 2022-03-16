@@ -4,7 +4,6 @@ namespace CreateQuestionFile.Models
 {
     internal class MainWindowModel
     {
-
         private string _QuestionsPath = @"questions";
 
         public string QuestionsPath
@@ -57,7 +56,7 @@ namespace CreateQuestionFile.Models
             set => _NumberQuestionText = value;
         }
 
-        public string Question { get; set; } 
+        public string Question { get; set; }
 
         public string AnswerA { get; set; }
         public string AnswerB { get; set; }

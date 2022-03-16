@@ -1,24 +1,25 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using static Quiz2.ViewModels.ChangeCategoryViewModel;
 
 namespace Quiz2.Models
 {
     internal class ChangeCategoryModel
     {
-        private string _PathQuestions = @"questions";
+        private string _QuestionsPath = @"questions";
 
-        public string PathQuestions
+        public string QuestionsPath
         {
-            get => _PathQuestions; 
-            set => _PathQuestions = value; 
+            get => _QuestionsPath; 
+            set => _QuestionsPath = value; 
         }
 
         public int NumberFiles { get; set; }
 
         public string CategoryName { get; set; }
 
-        public ObservableCollection<ButtonsProperties> Buttons { get; set; } = new ObservableCollection<ButtonsProperties>();
+        public List<ButtonsProperties> Buttons { get; set; } = new List<ButtonsProperties>();
 
-        public ObservableCollection<string> NamesFiles { get; set; } = new ObservableCollection<string>();
+        public List<string> NamesFiles { get; set; } = new List<string>();
     }
 }

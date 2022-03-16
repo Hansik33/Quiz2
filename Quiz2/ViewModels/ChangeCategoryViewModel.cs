@@ -4,6 +4,7 @@ using Quiz2.Interfaces;
 using Quiz2.Models;
 using Quiz2.Patterns;
 using Quiz2.ViewModels.ViewModelBase;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace Quiz2.ViewModels
 
         private bool DoesExistNonEmptyQuestionsFolder()
         {
-            if (Directory.Exists(PathQuestions)
-                && Directory.EnumerateFileSystemEntries(PathQuestions).Any()) return true;
+            if (Directory.Exists(QuestionsPath)
+                && Directory.EnumerateFileSystemEntries(QuestionsPath).Any()) return true;
             else return false;
         }
 
@@ -33,7 +34,7 @@ namespace Quiz2.ViewModels
                 NumberFiles = CheckNumberFilesInFolder();
                 for (int i = 0; i < NumberFiles; i++)
                 {
-                    NamesFiles.Add(Directory.GetFiles(PathQuestions)[i]);
+                    NamesFiles.Add(Directory.GetFiles(QuestionsPath)[i]);
                     var allFileText = File.ReadAllText(NamesFiles[i]);
                     CategoryFileModel categoryModel = JsonConvert.DeserializeObject<CategoryFileModel>(allFileText);
                     CategoryName = categoryModel.Informations.CategoryTitle;
@@ -54,12 +55,12 @@ namespace Quiz2.ViewModels
 
         private int CheckNumberFilesInFolder()
         {
-            var NumberFiles = Directory.GetFiles(PathQuestions, "*", SearchOption.TopDirectoryOnly).Length;
+            var NumberFiles = Directory.GetFiles(QuestionsPath, "*", SearchOption.TopDirectoryOnly).Length;
 
             return NumberFiles;
         }
 
-        public ObservableCollection<ButtonsProperties> Buttons
+        public List<ButtonsProperties> Buttons
         {
             get => model.Buttons;
 
@@ -70,7 +71,7 @@ namespace Quiz2.ViewModels
             }
         }
 
-        public ObservableCollection<string> NamesFiles
+        public List<string> NamesFiles
         {
             get => model.NamesFiles;
 
@@ -103,14 +104,14 @@ namespace Quiz2.ViewModels
             }
         }
 
-        public string PathQuestions
+        public string QuestionsPath
         {
-            get => model.PathQuestions;
+            get => model.QuestionsPath;
 
             set
             {
-                model.PathQuestions = value;
-                OnPropertyChanged(nameof(PathQuestions));
+                model.QuestionsPath = value;
+                OnPropertyChanged(nameof(QuestionsPath));
             }
         }
 
@@ -119,15 +120,15 @@ namespace Quiz2.ViewModels
             public string Content { get; set; }
         }
 
-        private ICommand _goTo2;
+        private ICommand _GoToGameView;
 
-        public ICommand GoTo2
+        public ICommand GoToGameView
         {
             get
             {
-                return _goTo2 ?? (_goTo2 = new RelayCommand(x =>
+                return _GoToGameView ?? (_GoToGameView = new RelayCommand(x =>
                 {
-                    Mediator.Notify("GoTo2Screen", "");
+                    Mediator.Notify("GoToGameView", "");
                 }));
             }
         }

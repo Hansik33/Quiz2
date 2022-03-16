@@ -5,21 +5,21 @@ namespace CreateQuestionFile.Models
     internal class MainWindowModel
     {
 
-        private string _PathQuestions = @"questions";
+        private string _QuestionsPath = @"questions";
 
-        public string PathQuestions
+        public string QuestionsPath
         {
-            get => _PathQuestions;
-            set => _PathQuestions = value;
+            get => _QuestionsPath;
+            set => _QuestionsPath = value;
         }
 
-        public bool IsAnswerDCorrectCheckBoxValue { get; set; }
+        public bool IsAnswerDCorrectCheckBoxIsChecked { get; set; }
 
-        public bool IsAnswerCCorrectCheckBoxValue { get; set; }
+        public bool IsAnswerCCorrectCheckBoxIsChecked { get; set; }
 
-        public bool IsAnswerBCorrectCheckBoxValue { get; set; }
+        public bool IsAnswerBCorrectCheckBoxIsChecked { get; set; }
 
-        public bool IsAnswerACorrectCheckBoxValue { get; set; }
+        public bool IsAnswerACorrectCheckBoxIsChecked { get; set; }
 
         public string AnswerDTextBoxText { get; set; }
 
@@ -30,6 +30,14 @@ namespace CreateQuestionFile.Models
         public string AnswerATextBoxText { get; set; }
 
         public string QuestionTextBoxText { get; set; }
+
+        private bool _CategoryTitleTextBoxIsReadOnly = false;
+
+        public bool CategoryTitleTextBoxIsReadOnly
+        {
+            get => _CategoryTitleTextBoxIsReadOnly;
+            set => _CategoryTitleTextBoxIsReadOnly = value;
+        }
 
         public string CategoryTitleTextBoxText { get; set; }
 

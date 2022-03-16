@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
         mc:Ignorable="d"
-        Title="Quiz 2"
+        Title="Quiz2"
         Height="768"
         Width="1024"
         WindowStartupLocation="CenterScreen"

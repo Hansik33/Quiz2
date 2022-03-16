@@ -12,12 +12,12 @@ namespace Quiz2.ViewModels
         public GameWindowViewModel()
         {
             PageViewModels.Add(new ChangeCategoryViewModel());
-            PageViewModels.Add(new UserControl2ViewModel());
+            PageViewModels.Add(new GameViewModel());
 
             CurrentPageViewModel = PageViewModels[0];
 
-            Mediator.Subscribe("GoTo1Screen", OnGo1Screen);
-            Mediator.Subscribe("GoTo2Screen", OnGo2Screen);
+            Mediator.Subscribe("GoToChangeCategoryView", OnGoChangeCategoryViewModel);
+            Mediator.Subscribe("GoToGameView", OnGoGameView);
         }
 
         public List<IPageViewModel> PageViewModels
@@ -53,12 +53,12 @@ namespace Quiz2.ViewModels
                 .FirstOrDefault(vm => vm == viewModel);
         }
 
-        private void OnGo1Screen(object obj)
+        private void OnGoChangeCategoryViewModel(object obj)
         {
             ChangeViewModel(PageViewModels[0]);
         }
 
-        private void OnGo2Screen(object obj)
+        private void OnGoGameView(object obj)
         {
             ChangeViewModel(PageViewModels[1]);
         }

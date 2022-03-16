@@ -6,28 +6,31 @@
         xmlns:viewmodels="clr-namespace:CreateQuestionFile.ViewModels" 
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="Utwórz plik kategorii"
-        Height="636"
-        Width="768">
+        Title="Quiz2 Kreator"
+        Height="768"
+        Width="768"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
     <StackPanel Orientation="Vertical"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
         <Label Content="Utwórz plik kategorii"
-               FontSize="52"
+               FontSize="64"
                FontWeight="Bold"
                HorizontalAlignment="Center"
                VerticalAlignment="Top"
                Margin="5" />
         <Label Content="Podaj nazwę kategorii:"
-               FontSize="36"
+               FontSize="52"
                HorizontalAlignment="Center"
                Margin="5" />
         <TextBox x:Name="CategoryTitleTextBox"
                  Text="{Binding CategoryTitleTextBoxText}"
+                 IsReadOnly="{Binding CategoryTitleTextBoxIsReadOnly}"
                  Margin="5"
                  TextAlignment="Center" />
         <Label Content="Podaj treść pytania: "
-               FontSize="32"
+               FontSize="48"
                HorizontalAlignment="Center"
                Margin="5" />
         <TextBox x:Name="QuestionTextBox"
@@ -41,7 +44,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Label Content="Odpowiedź A:"
-                       FontSize="24"
+                       FontSize="26"
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerATextBox"
@@ -49,7 +52,7 @@
                          Margin="5"
                          TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerACorrectCheckBox"
-                          IsChecked="{Binding IsAnswerACorrectCheckBoxValue}"
+                          IsChecked="{Binding IsAnswerACorrectCheckBoxIsChecked}"
                           Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
@@ -58,7 +61,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Label Content="Odpowiedź B:"
-                       FontSize="24"
+                       FontSize="26"
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerBTextBox"
@@ -66,7 +69,7 @@
                          Margin="5"
                          TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerBCorrectCheckBox"
-                          IsChecked="{Binding IsAnswerBCorrectCheckBoxValue}"
+                          IsChecked="{Binding IsAnswerBCorrectCheckBoxIsChecked}"
                           Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
@@ -75,7 +78,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Label Content="Odpowiedź C:"
-                       FontSize="24"
+                       FontSize="26"
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerCTextBox"
@@ -84,7 +87,7 @@
                          TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerCCorrectCheckBox"
                           Checked="ChooseOnlyOneCheckbox"
-                          IsChecked="{Binding IsAnswerCCorrectCheckBoxValue}"
+                          IsChecked="{Binding IsAnswerCCorrectCheckBoxIsChecked}"
                           HorizontalAlignment="Center"
                           Margin="5" />
             </StackPanel>
@@ -92,7 +95,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Label Content="Odpowiedź D:"
-                       FontSize="24"
+                       FontSize="26"
                        HorizontalAlignment="Center"
                        Margin="5" />
                 <TextBox x:Name="AnswerDTextBox"
@@ -100,7 +103,7 @@
                          Margin="5"
                          TextAlignment="Center" />
                 <CheckBox x:Name="IsAnswerDCorrectCheckBox"
-                          IsChecked="{Binding IsAnswerDCorrectCheckBoxValue}"
+                          IsChecked="{Binding IsAnswerDCorrectCheckBoxIsChecked}"
                           Checked="ChooseOnlyOneCheckbox"
                           HorizontalAlignment="Center"
                           Margin="5" />
@@ -115,7 +118,7 @@
                 Margin="5">
             <Button.Content>
                 <Label Content="Dodaj pytanie"
-                       FontSize="24" />
+                       FontSize="36" />
             </Button.Content>
         </Button>
         <Label x:Name="NumberQuestionLabel"
@@ -127,7 +130,7 @@
                 Margin="20">
             <Button.Content>
                 <Label Content="Utwórz plik"
-                       FontSize="32" />
+                       FontSize="42" />
             </Button.Content>
         </Button>
     </StackPanel>

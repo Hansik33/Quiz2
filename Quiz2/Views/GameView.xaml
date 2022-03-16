@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="Quiz2.Views.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Quiz2.Views" 
+             xmlns:viewmodels="clr-namespace:Quiz2.ViewModels" 
+             d:DataContext="{d:DesignInstance Type=viewmodels:GameViewModel}"
+             mc:Ignorable="d"
+             d:DesignHeight="768" 
+             d:DesignWidth="1024"
+             Background="#454545">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../ResourceDictionaries/ButtonsStyleResourceDictionary.xaml" />
+    </UserControl.Resources>
+    <StackPanel>
+        <Border BorderThickness="0,0,0,3"
+                    BorderBrush="White"
+                    Width="960">
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10">
+                <Image Source="/Icons/joystick.png"
+                   Width="150"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+                <TextBlock x:Name="CategoryTitleTextBlock" 
+               Text="{Binding CategoryTitle}"
+               Foreground="White"
+                       FontFamily="Calibri"
+                       FontSize="64"
+                       FontWeight="DemiBold"
+                       Padding="10,20,20,20"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+        <Border Background="LightGray"
+                BorderThickness="1"
+                Width="950"
+                Height="200"
+                >
+            <TextBlock x:Name="QuestionTextBlock" />
+        </Border>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Button x:Name="AnswerAButton" 
+                    Content="" 
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
+                    Width="475" />
+                <Button x:Name="AnswerBButton" 
+                    Content="" 
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Width="475" Cursor="Hand" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Button x:Name="AnswerCButton" 
+                    Content="" 
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
+                        Width="475" />
+                <Button x:Name="AnswerDButton" 
+                    Content="" 
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
+                    Width="475" />
+            </StackPanel>
+        </StackPanel>
+        <Grid>
+            <ProgressBar x:Name="CorrectAnswersProgressBar"
+                     Value="50"
+                     Width="950"
+                     Height="50"
+                     Margin="10" />
+            <TextBlock Foreground="Black"
+                       FontSize="16"
+                       FontWeight="DemiBold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Odpowiedziano poprawnie: {0}/{1}">
+                        <Binding Path="Value" 
+                                 ElementName="CorrectAnswersProgressBar" />
+                        <Binding Path="Maximum" 
+                                 ElementName="CorrectAnswersProgressBar" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </Grid>
+        <Grid>
+            <ProgressBar x:Name="AllQuestionsProgressBar"
+                     Value="75"
+                     Foreground="Gray"
+                     Width="950"
+                     Height="50"
+                     Margin="10" />
+            <TextBlock FontSize="16"
+                       FontWeight="DemiBold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Odpowiedziano: {0}/{1}">
+                        <Binding Path="Value" 
+                                 ElementName="AllQuestionsProgressBar" />
+                        <Binding Path="Maximum" 
+                                 ElementName="AllQuestionsProgressBar" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </Grid>
+    </StackPanel>
+</UserControl>

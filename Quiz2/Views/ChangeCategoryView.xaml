@@ -7,13 +7,14 @@
              xmlns:viewmodels="clr-namespace:Quiz2.ViewModels" 
              d:DataContext="{d:DesignInstance Type=viewmodels:ChangeCategoryViewModel}"
              mc:Ignorable="d"
-             d:DesignHeight="768" d:DesignWidth="1024"
+             d:DesignHeight="768" 
+             d:DesignWidth="1024"
              Background="#454545">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../ResourceDictionaries/CustomScrollViewerStyleResourceDictionary.xaml" />
-                <ResourceDictionary Source="../ResourceDictionaries/ChangeCategoryViewButtonsStyleResourceDictionary.xaml" />
+                <ResourceDictionary Source="../ResourceDictionaries/ButtonsStyleResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -52,8 +53,10 @@
                 <ItemsControl ItemsSource="{Binding Buttons}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Button Style="{StaticResource ChangeCategoryViewButtonsStyle}"
-                                    Command="{Binding ElementName=ChangeCategoryViewUserControl, Path=DataContext.GoTo2}">
+                            <Button Tag="{Binding Content}"
+                                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                                    Command="{Binding ElementName=ChangeCategoryViewUserControl, Path=DataContext.GoToGameView}"
+                                    Click="ChooseCategory">
                                 <Button.Content>
                                     <TextBlock Text="{Binding Content}"
                                            Foreground="White"

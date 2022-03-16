@@ -19,7 +19,7 @@ namespace CreateQuestionFile.ViewModels
     internal class MainWindowViewModel : BaseViewModel
     {
         public MainWindowViewModel()
-        {
+        { 
             CreateCategoryFileCommand = new RelayCommand(CreateCategoryFile);
             AddNextQuestionCommand = new RelayCommand(AddNextQuestion);
         }
@@ -30,7 +30,7 @@ namespace CreateQuestionFile.ViewModels
 
         private bool DoesExistQuestionsFolder()
         {
-            if (Directory.Exists(PathQuestions)) return true;
+            if (Directory.Exists(QuestionsPath)) return true;
             else return false;
         }
 
@@ -45,10 +45,10 @@ namespace CreateQuestionFile.ViewModels
             if (String.IsNullOrWhiteSpace(AnswerCTextBoxText)) return false;
             if (String.IsNullOrWhiteSpace(AnswerDTextBoxText)) return false;
 
-            if (!(IsAnswerACorrectCheckBoxValue)
-                && !(IsAnswerBCorrectCheckBoxValue)
-                && !(IsAnswerCCorrectCheckBoxValue)
-                && !(IsAnswerDCorrectCheckBoxValue)) return false;
+            if (!(IsAnswerACorrectCheckBoxIsChecked)
+                && !(IsAnswerBCorrectCheckBoxIsChecked)
+                && !(IsAnswerCCorrectCheckBoxIsChecked)
+                && !(IsAnswerDCorrectCheckBoxIsChecked)) return false;
 
             return true;
         }
@@ -57,10 +57,10 @@ namespace CreateQuestionFile.ViewModels
         {
             var correctAnswer = string.Empty;
 
-            if (IsAnswerACorrectCheckBoxValue) correctAnswer = AnswerATextBoxText;
-            else if (IsAnswerBCorrectCheckBoxValue) correctAnswer = AnswerBTextBoxText;
-            else if (IsAnswerCCorrectCheckBoxValue) correctAnswer = AnswerCTextBoxText;
-            else if (IsAnswerDCorrectCheckBoxValue) correctAnswer = AnswerDTextBoxText;
+            if (IsAnswerACorrectCheckBoxIsChecked) correctAnswer = AnswerATextBoxText;
+            else if (IsAnswerBCorrectCheckBoxIsChecked) correctAnswer = AnswerBTextBoxText;
+            else if (IsAnswerCCorrectCheckBoxIsChecked) correctAnswer = AnswerCTextBoxText;
+            else if (IsAnswerDCorrectCheckBoxIsChecked) correctAnswer = AnswerDTextBoxText;
 
             return correctAnswer;
         }
@@ -87,6 +87,24 @@ namespace CreateQuestionFile.ViewModels
             AnswerD = Char.ToUpper(AnswerD[0]) + AnswerD.Substring(1);
 
             CorrectAnswer = Char.ToUpper(CorrectAnswer[0]) + CorrectAnswer.Substring(1);
+
+            if (!(CategoryTitleTextBoxIsReadOnly)) CategoryTitleTextBoxIsReadOnly = true;
+        }
+
+        private void ClearFields()
+        {
+            QuestionTextBoxText = String.Empty;
+
+            AnswerATextBoxText = String.Empty;
+            AnswerBTextBoxText = String.Empty;
+            AnswerCTextBoxText = String.Empty;
+            AnswerDTextBoxText = String.Empty;
+
+            IsAnswerACorrectCheckBoxIsChecked = false;
+            IsAnswerBCorrectCheckBoxIsChecked = false;
+            IsAnswerCCorrectCheckBoxIsChecked = false;
+            IsAnswerDCorrectCheckBoxIsChecked = false;
+
         }
 
         private void AddNewPackage()
@@ -133,7 +151,8 @@ namespace CreateQuestionFile.ViewModels
         {
             FullJSON = JsonConvert.SerializeObject(categoryFileModel, Formatting.Indented);
 
-            File.WriteAllText(PathQuestions
+            File.WriteAllText(QuestionsPath
+                + "/"
                 + FileName
                 + ".json", FullJSON);
         }
@@ -153,6 +172,8 @@ namespace CreateQuestionFile.ViewModels
                 AssignPackageValuesToVariables();
 
                 AddNewPackage();
+
+                ClearFields();
             }
             else MessageBox.Show("Wszystkie pola muszą być wypełnione!", "Błąd",
                 MessageBoxButton.OK, MessageBoxImage.Error);
@@ -164,8 +185,6 @@ namespace CreateQuestionFile.ViewModels
             {
                 if (NumberQuestionNumber > 0)
                 {
-                    if (AreAllFieldsNonEmpty())
-                    {
                         AssignCategoryValuesToVariables();
 
                         CreateFileName();
@@ -173,9 +192,6 @@ namespace CreateQuestionFile.ViewModels
                         SerializeAndCreateCategoryFile();
 
                         InformAboutDone();
-                    }
-                    else MessageBox.Show("Wszystkie pola muszą być wypełnione!", "Błąd",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else MessageBox.Show("Liczba pytań musi być większa od zera!", "Błąd",
                         MessageBoxButton.OK, MessageBoxImage.Error);
@@ -189,53 +205,63 @@ namespace CreateQuestionFile.ViewModels
             }
         }
 
-        public string PathQuestions
+        public bool CategoryTitleTextBoxIsReadOnly
         {
-            get => model.PathQuestions;
+            get => model.CategoryTitleTextBoxIsReadOnly;
             set
             {
-                model.PathQuestions = value;
-                OnPropertyChanged(nameof(PathQuestions));
+                model.CategoryTitleTextBoxIsReadOnly = value;
+                OnPropertyChanged(nameof(CategoryTitleTextBoxIsReadOnly));
             }
         }
 
-        public bool IsAnswerDCorrectCheckBoxValue
+        public string QuestionsPath
         {
-            get => model.IsAnswerDCorrectCheckBoxValue;
+            get => model.QuestionsPath;
             set
             {
-                model.IsAnswerDCorrectCheckBoxValue = value;
-                OnPropertyChanged(nameof(IsAnswerDCorrectCheckBoxValue));
+                model.QuestionsPath = value;
+                OnPropertyChanged(nameof(QuestionsPath));
             }
         }
 
-        public bool IsAnswerCCorrectCheckBoxValue
+        public bool IsAnswerDCorrectCheckBoxIsChecked
         {
-            get => model.IsAnswerCCorrectCheckBoxValue;
+            get => model.IsAnswerDCorrectCheckBoxIsChecked;
             set
             {
-                model.IsAnswerCCorrectCheckBoxValue = value;
-                OnPropertyChanged(nameof(IsAnswerCCorrectCheckBoxValue));
+                model.IsAnswerDCorrectCheckBoxIsChecked = value;
+                OnPropertyChanged(nameof(IsAnswerDCorrectCheckBoxIsChecked));
             }
         }
 
-        public bool IsAnswerBCorrectCheckBoxValue
+        public bool IsAnswerCCorrectCheckBoxIsChecked
         {
-            get => model.IsAnswerBCorrectCheckBoxValue;
+            get => model.IsAnswerCCorrectCheckBoxIsChecked;
             set
             {
-                model.IsAnswerBCorrectCheckBoxValue = value;
-                OnPropertyChanged(nameof(IsAnswerBCorrectCheckBoxValue));
+                model.IsAnswerCCorrectCheckBoxIsChecked = value;
+                OnPropertyChanged(nameof(IsAnswerCCorrectCheckBoxIsChecked));
             }
         }
 
-        public bool IsAnswerACorrectCheckBoxValue
+        public bool IsAnswerBCorrectCheckBoxIsChecked
         {
-            get => model.IsAnswerACorrectCheckBoxValue;
+            get => model.IsAnswerBCorrectCheckBoxIsChecked;
             set
             {
-                model.IsAnswerACorrectCheckBoxValue = value;
-                OnPropertyChanged(nameof(IsAnswerACorrectCheckBoxValue));
+                model.IsAnswerBCorrectCheckBoxIsChecked = value;
+                OnPropertyChanged(nameof(IsAnswerBCorrectCheckBoxIsChecked));
+            }
+        }
+
+        public bool IsAnswerACorrectCheckBoxIsChecked
+        {
+            get => model.IsAnswerACorrectCheckBoxIsChecked;
+            set
+            {
+                model.IsAnswerACorrectCheckBoxIsChecked = value;
+                OnPropertyChanged(nameof(IsAnswerACorrectCheckBoxIsChecked));
             }
         }
 

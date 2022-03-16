@@ -1,13 +1,12 @@
 ﻿<UserControl x:Class="Quiz2.Views.GameView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:Quiz2.Views" 
-             xmlns:viewmodels="clr-namespace:Quiz2.ViewModels" 
+             xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:GameViewModel}"
              mc:Ignorable="d"
-             d:DesignHeight="768" 
+             d:DesignHeight="768"
              d:DesignWidth="1024"
              Background="#454545">
     <UserControl.Resources>
@@ -25,7 +24,7 @@
                    Width="150"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center" />
-                <TextBlock x:Name="CategoryTitleTextBlock" 
+                <TextBlock x:Name="CategoryTitleTextBlock"
                Text="{Binding CategoryTitle}"
                Foreground="White"
                        FontFamily="Calibri"
@@ -40,8 +39,9 @@
         <Border Background="LightGray"
                 BorderThickness="1"
                 Width="950"
-                Height="200"
-                >
+                Height="120"
+                CornerRadius="50"
+                Margin="20">
             <TextBlock x:Name="QuestionTextBlock" />
         </Border>
         <StackPanel Orientation="Vertical"
@@ -50,26 +50,30 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <Button x:Name="AnswerAButton" 
-                    Content="" 
-                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
-                    Width="475" />
-                <Button x:Name="AnswerBButton" 
-                    Content="" 
+                <Button x:Name="AnswerAButton"
+                    Content=""
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
-                    Width="475" Cursor="Hand" />
+                    Width="475"
+                    Height="120" />
+                <Button x:Name="AnswerBButton"
+                    Content=""
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Width="475"
+                    Height="120" />
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <Button x:Name="AnswerCButton" 
-                    Content="" 
-                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
-                        Width="475" />
-                <Button x:Name="AnswerDButton" 
-                    Content="" 
-                    Style="{StaticResource ChangeCategoryViewButtonsStyle}" 
-                    Width="475" />
+                <Button x:Name="AnswerCButton"
+                    Content=""
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                        Width="475"
+                        Height="120" />
+                <Button x:Name="AnswerDButton"
+                    Content=""
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Width="475"
+                    Height="120" />
             </StackPanel>
         </StackPanel>
         <Grid>
@@ -81,13 +85,13 @@
             <TextBlock Foreground="Black"
                        FontSize="16"
                        FontWeight="DemiBold"
-                       HorizontalAlignment="Center" 
+                       HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                 <TextBlock.Text>
                     <MultiBinding StringFormat="{}Odpowiedziano poprawnie: {0}/{1}">
-                        <Binding Path="Value" 
+                        <Binding Path="Value"
                                  ElementName="CorrectAnswersProgressBar" />
-                        <Binding Path="Maximum" 
+                        <Binding Path="Maximum"
                                  ElementName="CorrectAnswersProgressBar" />
                     </MultiBinding>
                 </TextBlock.Text>
@@ -102,13 +106,13 @@
                      Margin="10" />
             <TextBlock FontSize="16"
                        FontWeight="DemiBold"
-                       HorizontalAlignment="Center" 
+                       HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                 <TextBlock.Text>
                     <MultiBinding StringFormat="{}Odpowiedziano: {0}/{1}">
-                        <Binding Path="Value" 
+                        <Binding Path="Value"
                                  ElementName="AllQuestionsProgressBar" />
-                        <Binding Path="Maximum" 
+                        <Binding Path="Maximum"
                                  ElementName="AllQuestionsProgressBar" />
                     </MultiBinding>
                 </TextBlock.Text>

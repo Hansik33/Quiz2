@@ -2,13 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:GameViewModel}"
              mc:Ignorable="d"
-             d:DesignHeight="768"
-             d:DesignWidth="1024"
-             Background="#454545">
+             d:DesignHeight="812"
+             d:DesignWidth="1024">
     <UserControl.Resources>
         <ResourceDictionary Source="../ResourceDictionaries/ButtonsStyleResourceDictionary.xaml" />
     </UserControl.Resources>
@@ -19,18 +19,18 @@
             <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Margin="10">
-                <Image Source="/Icons/joystick.png"
-                   Width="150"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+                    Margin="0,0,0,10">
+                <svgc:SvgViewbox Source="/Icons/joystick.svg"
+                                 Width="150"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
                 <TextBlock x:Name="CategoryTitleTextBlock"
                        Text="{Binding CategoryTitle}"
                        Foreground="White"
                        FontFamily="Calibri"
                        FontSize="64"
                        FontWeight="DemiBold"
-                       Padding="10,20,20,20"
+                       Padding="10,0,20,20"
                        TextAlignment="Center"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />

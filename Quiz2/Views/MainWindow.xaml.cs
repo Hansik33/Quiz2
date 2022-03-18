@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Quiz2
 {
@@ -8,12 +7,6 @@ namespace Quiz2
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void TurnOffApplicationClosingWindow(object obj, CancelEventArgs e)
-        {
-            e.Cancel = true;
-            System.Environment.Exit(0);
         }
     }
 }

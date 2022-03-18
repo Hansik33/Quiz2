@@ -1,9 +1,11 @@
-﻿using Quiz2.Interfaces;
+﻿using Quiz2.Commands;
+using Quiz2.Interfaces;
 using Quiz2.Models;
 using Quiz2.Patterns;
 using Quiz2.ViewModels.ViewModelBase;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 
 namespace Quiz2.ViewModels
 {
@@ -15,6 +17,8 @@ namespace Quiz2.ViewModels
             PageViewModels.Add(new GameViewModel());
 
             CurrentPageViewModel = PageViewModels[0];
+
+            GoToChangeCategoryViewCommand = new RelayCommand(OnGoChangeCategoryViewModel);
 
             Mediator.Subscribe("GoToChangeCategoryView", OnGoChangeCategoryViewModel);
             Mediator.Subscribe("GoToGameView", OnGoGameView);
@@ -62,6 +66,8 @@ namespace Quiz2.ViewModels
         {
             ChangeViewModel(PageViewModels[1]);
         }
+
+        public ICommand GoToChangeCategoryViewCommand { get; set; }
 
         private IPageViewModel _currentPageViewModel;
         private List<IPageViewModel> _pageViewModels;

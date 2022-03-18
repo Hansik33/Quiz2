@@ -8,21 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Icons\brain.png" />
-    <None Remove="Icons\informations.png" />
-    <None Remove="Icons\joystick.png" />
-    <None Remove="Icons\qanda.png" />
+    <None Remove="Icons\brain.svg" />
+    <None Remove="Icons\cancel.svg" />
+    <None Remove="Icons\informations.svg" />
+    <None Remove="Icons\joystick.svg" />
+    <None Remove="Icons\qanda.svg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SharpVectors" Version="1.7.7" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Icons\brain.png" />
-    <Resource Include="Icons\informations.png" />
-    <Resource Include="Icons\joystick.png" />
-    <Resource Include="Icons\qanda.png" />
+    <Resource Include="Icons\brain.svg" />
+    <Resource Include="Icons\cancel.svg" />
+    <Resource Include="Icons\informations.svg" />
+    <Resource Include="Icons\joystick.svg" />
+    <Resource Include="Icons\qanda.svg" />
   </ItemGroup>
 
 </Project>

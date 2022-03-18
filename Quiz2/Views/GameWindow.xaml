@@ -1,19 +1,36 @@
 ﻿<Window x:Class="Quiz2.Views.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Quiz2.Views"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
         mc:Ignorable="d"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
         Title="Quiz2"
-        Height="768"
+        Height="812"
         Width="1024"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize"
-        Closing="TurnOffApplicationClosingWindow">
-    <Grid>
-        <ContentControl Content="{Binding CurrentPageViewModel}" />
-    </Grid>
+        ResizeMode="CanMinimize">
+    <Window.Resources>
+        <ResourceDictionary Source="../ResourceDictionaries/CancelButtonStyleResourceDictionary.xaml" />
+    </Window.Resources>
+    <Border Background="#454545"
+            CornerRadius="20">
+        <StackPanel>
+            <Button Click="ClosingWindow"
+                    Command="{Binding GoToChangeCategoryViewCommand}"
+                    Style="{StaticResource CancelButtonStyle}"
+                    Margin="0,50,50,0">
+                <Button.Content>
+                    <svgc:SvgViewbox Source="/Icons/cancel.svg"
+                                     Width="50" />
+                </Button.Content>
+            </Button>
+            <ContentControl Content="{Binding CurrentPageViewModel}" />
+        </StackPanel>
+    </Border>
 </Window>

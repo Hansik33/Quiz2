@@ -7,7 +7,6 @@ using Quiz2.ViewModels.ViewModelBase;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -30,17 +29,34 @@ namespace Quiz2.ViewModels
 
             ChangeProgressBarTextBlockForegroundColor();
 
+            TryFinish();
+
             DrawAndAssignValues();
+        }
+
+        private bool ShouldFinishQuiz()
+        {
+            if (QuestionsList.Count == 0) return true;
+            else return false;
+        }
+
+        private void TryFinish()
+        {
+            if (ShouldFinishQuiz())
+            {
+                File.WriteAllText("EARNEDSCORE.temp", ScoreNumber.ToString());
+
+                GoToChangeCategoryView.Execute(null);
+            }
         }
 
         private void ChangeProgressBarTextBlockForegroundColor()
         {
-
             var resultScore = ((double)ScoreNumber / (double)NumberOfQuestions);
             var resultAnswered = ((double)AnsweredNumber / (double)NumberOfQuestions);
 
-            if (resultScore == 0.5) CorrectAnswersProgressBarForegroundBrush = Brushes.White; 
-            if (resultAnswered == 0.5) AllQuestionsProgressBarForegroundBrush = Brushes.White; 
+            if (resultScore == 0.5) CorrectAnswersProgressBarForegroundBrush = Brushes.White;
+            if (resultAnswered == 0.5) AllQuestionsProgressBarForegroundBrush = Brushes.White;
         }
 
         private void CheckAnswerCorrectness()

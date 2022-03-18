@@ -11,9 +11,8 @@ namespace Quiz2.Views
             DataContext = new InfoWindowViewModel();
         }
 
-        private void ClosingWindow(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ClosingWindow(object sender, RoutedEventArgs e)
         {
-            e.Cancel = true;
             this.Visibility = Visibility.Hidden;
             if (Application.Current.MainWindow != null) Application.Current.MainWindow.WindowState = WindowState.Normal;
         }

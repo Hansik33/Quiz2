@@ -3,18 +3,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:ChangeCategoryViewModel}"
              mc:Ignorable="d"
-             d:DesignHeight="768"
-             d:DesignWidth="1024"
-             Background="#454545">
+             d:DesignHeight="812"
+             d:DesignWidth="1024">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../ResourceDictionaries/CustomScrollViewerStyleResourceDictionary.xaml" />
                 <ResourceDictionary Source="../ResourceDictionaries/ButtonsStyleResourceDictionary.xaml" />
+                <ResourceDictionary Source="../ResourceDictionaries/CancelButtonStyleResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -26,17 +27,17 @@
                 <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Margin="20">
-                    <Image Source="/Icons/qanda.png"
-                   Width="100"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+                    Margin="0,0,0,20">
+                    <svgc:SvgViewbox Source="/Icons/qanda.svg"
+                                     Width="100"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center" />
                     <TextBlock Text="Wybierz kategorię:"
                        Foreground="White"
                        FontFamily="Calibri"
                        FontSize="64"
                        FontWeight="DemiBold"
-                       Padding="10,20,20,20"
+                       Padding="10,0,20,20"
                        TextAlignment="Center"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">

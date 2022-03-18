@@ -11,10 +11,10 @@ namespace Quiz2.Views
             DataContext = new GameWindowViewModel();
         }
 
-        private void TurnOffApplicationClosingWindow(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ClosingWindow(object sender, RoutedEventArgs e)
         {
-            e.Cancel = true;
-            System.Environment.Exit(0);
+            this.Visibility = Visibility.Hidden;
+            if (Application.Current.MainWindow != null) Application.Current.MainWindow.WindowState = WindowState.Normal;
         }
     }
 }

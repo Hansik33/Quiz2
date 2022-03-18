@@ -3,15 +3,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
         Title="Menu główne"
-        Height="300"
+        Height="250"
         Width="300"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize"
-        Closing="TurnOffApplicationClosingWindow">
+        ResizeMode="CanMinimize">
     <Window.Resources>
         <Style x:Key="MainWindowMenuButtonsStyle"
                TargetType="Button">
@@ -40,16 +43,20 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <StackPanel Background="#454545">
-        <StackPanel Orientation="Vertical"
+    <Border Background="#454545"
+            CornerRadius="20">
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal"
+                <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <Image Width="50"
-                    Source="/Icons/brain.png" />
-                <TextBlock Text="Quiz"
+                    <svgc:SvgViewbox Source="/Icons/brain.svg"
+                                 Width="50"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <TextBlock Text="Quiz"
                    Foreground="White"
                    FontFamily="Calibri"
                    TextAlignment="Center"
@@ -58,7 +65,7 @@
                    Padding="0,20,0,20"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center" />
-                <TextBlock Text="2"
+                    <TextBlock Text="2"
                            Foreground="#d9534f"
                    FontFamily="Calibri"
                    TextAlignment="Center"
@@ -67,31 +74,32 @@
                    FontWeight="DemiBold"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center" />
+                </StackPanel>
+                <Button Command="{Binding ShowGameWindowCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                    <Button.Content>
+                        <TextBlock Text="Graj"
+                               FontSize="16"
+                               Foreground="White" />
+                    </Button.Content>
+                </Button>
+                <Button Command="{Binding ShowApplicationInfoCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                    <Button.Content>
+                        <TextBlock Text="O aplikacji"
+                               FontSize="16"
+                               Foreground="White" />
+                    </Button.Content>
+                </Button>
+                <Button Command="{Binding TurnOffApplicationCommand}"
+                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
+                    <Button.Content>
+                        <TextBlock Text="Wyjście"
+                               FontSize="16"
+                               Foreground="White" />
+                    </Button.Content>
+                </Button>
             </StackPanel>
-            <Button Command="{Binding ShowGameWindowCommand}"
-                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
-                <Button.Content>
-                    <TextBlock Text="Graj"
-                               FontSize="16"
-                               Foreground="White" />
-                </Button.Content>
-            </Button>
-            <Button Command="{Binding ShowApplicationInfoCommand}"
-                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
-                <Button.Content>
-                    <TextBlock Text="O aplikacji"
-                               FontSize="16"
-                               Foreground="White" />
-                </Button.Content>
-            </Button>
-            <Button Command="{Binding TurnOffApplicationCommand}"
-                    Style="{StaticResource MainWindowMenuButtonsStyle}" Cursor="Hand">
-                <Button.Content>
-                    <TextBlock Text="Wyjście"
-                               FontSize="16"
-                               Foreground="White" />
-                </Button.Content>
-            </Button>
         </StackPanel>
-    </StackPanel>
+    </Border>
 </Window>

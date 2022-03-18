@@ -4,12 +4,12 @@ namespace CreateQuestionFile.Models
 {
     internal class MainWindowModel
     {
-        private string _QuestionsPath = @"questions";
+        private string _questionsPath = @"questions";
 
         public string QuestionsPath
         {
-            get => _QuestionsPath;
-            set => _QuestionsPath = value;
+            get => _questionsPath;
+            set => _questionsPath = value;
         }
 
         public bool IsAnswerDCorrectCheckBoxIsChecked { get; set; }
@@ -30,30 +30,30 @@ namespace CreateQuestionFile.Models
 
         public string QuestionTextBoxText { get; set; }
 
-        private bool _CategoryTitleTextBoxIsReadOnly = false;
+        private bool _categoryTitleTextBoxIsReadOnly = false;
 
         public bool CategoryTitleTextBoxIsReadOnly
         {
-            get => _CategoryTitleTextBoxIsReadOnly;
-            set => _CategoryTitleTextBoxIsReadOnly = value;
+            get => _categoryTitleTextBoxIsReadOnly;
+            set => _categoryTitleTextBoxIsReadOnly = value;
         }
 
         public string CategoryTitleTextBoxText { get; set; }
 
-        public static int _NumberQuestionNumber = 0;
+        public static int _numberQuestionNumber = 0;
 
         public int NumberQuestionNumber
         {
-            get => _NumberQuestionNumber;
-            set => _NumberQuestionNumber = value;
+            get => _numberQuestionNumber;
+            set => _numberQuestionNumber = value;
         }
 
-        public string _NumberQuestionText = "Ilość pytań: " + _NumberQuestionNumber.ToString();
+        public string _numberQuestionText = "Ilość pytań: " + _numberQuestionNumber.ToString();
 
         public string NumberQuestionText
         {
-            get => _NumberQuestionText;
-            set => _NumberQuestionText = value;
+            get => _numberQuestionText;
+            set => _numberQuestionText = value;
         }
 
         public string Question { get; set; }

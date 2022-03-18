@@ -35,7 +35,7 @@ namespace Quiz2.ViewModels
                 {
                     NamesFiles.Add(Directory.GetFiles(QuestionsPath)[i]);
                     var allFileText = File.ReadAllText(NamesFiles[i]);
-                    CategoryFileModel categoryModel = JsonConvert.DeserializeObject<CategoryFileModel>(allFileText);
+                    var categoryModel = JsonConvert.DeserializeObject<CategoryFileModel>(allFileText);
                     CategoryName = categoryModel.Informations.CategoryTitle;
                     Buttons.Add(new ButtonsProperties()
                     {
@@ -119,13 +119,13 @@ namespace Quiz2.ViewModels
             public string Content { get; set; }
         }
 
-        private ICommand _GoToGameView;
+        private ICommand _goToGameView;
 
         public ICommand GoToGameView
         {
             get
             {
-                return _GoToGameView ?? (_GoToGameView = new RelayCommand(x =>
+                return _goToGameView ?? (_goToGameView = new RelayCommand(x =>
                 {
                     Mediator.Notify("GoToGameView", "");
                 }));

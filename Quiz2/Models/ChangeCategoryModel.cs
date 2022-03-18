@@ -5,12 +5,12 @@ namespace Quiz2.Models
 {
     internal class ChangeCategoryModel
     {
-        private string _QuestionsPath = @"questions";
+        private string _questionsPath = @"questions";
 
         public string QuestionsPath
         {
-            get => _QuestionsPath;
-            set => _QuestionsPath = value;
+            get => _questionsPath;
+            set => _questionsPath = value;
         }
 
         public int NumberFiles { get; set; }

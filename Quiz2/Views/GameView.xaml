@@ -25,8 +25,8 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center" />
                 <TextBlock x:Name="CategoryTitleTextBlock"
-               Text="{Binding CategoryTitle}"
-               Foreground="White"
+                       Text="{Binding CategoryTitle}"
+                       Foreground="White"
                        FontFamily="Calibri"
                        FontSize="64"
                        FontWeight="DemiBold"
@@ -42,7 +42,15 @@
                 Height="120"
                 CornerRadius="50"
                 Margin="20">
-            <TextBlock x:Name="QuestionTextBlock" />
+            <TextBlock x:Name="QuestionTextBlock"
+                       Text="{Binding Question}"
+                       Foreground="Black"
+                       FontSize="34"
+                       FontWeight="DemiBold"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
         </Border>
         <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"
@@ -51,13 +59,23 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Button x:Name="AnswerAButton"
-                    Content=""
+                    Command="{Binding AnswerQuestionCommand}"
+                    Click="AnswerQuestion"
+                    Content="{Binding AnswerA}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Foreground="White"
+                    FontSize="32"
+                    FontWeight="DemiBold"
                     Width="475"
-                    Height="120" />
+                    Height="120" Cursor="Hand" />
                 <Button x:Name="AnswerBButton"
-                    Content=""
+                    Command="{Binding AnswerQuestionCommand}"
+                    Click="AnswerQuestion"
+                    Content="{Binding AnswerB}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Foreground="White"
+                    FontSize="32"
+                    FontWeight="DemiBold"
                     Width="475"
                     Height="120" />
             </StackPanel>
@@ -65,25 +83,36 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <Button x:Name="AnswerCButton"
-                    Content=""
+                    Command="{Binding AnswerQuestionCommand}"
+                    Click="AnswerQuestion"
+                    Content="{Binding AnswerC}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
-                        Width="475"
-                        Height="120" />
-                <Button x:Name="AnswerDButton"
-                    Content=""
-                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Foreground="White"
+                    FontSize="32"
+                    FontWeight="DemiBold"
                     Width="475"
                     Height="120" />
+                <Button x:Name="AnswerDButton"
+                    Command="{Binding AnswerQuestionCommand}"
+                    Click="AnswerQuestion"
+                    Content="{Binding AnswerD}"
+                    Style="{StaticResource ChangeCategoryViewButtonsStyle}"
+                    Foreground="White"
+                    FontSize="32"
+                    FontWeight="DemiBold"
+                    Width="475"
+                    Height="120" Cursor="Hand" />
             </StackPanel>
         </StackPanel>
         <Grid>
             <ProgressBar x:Name="CorrectAnswersProgressBar"
-                     Value="50"
+                     Value="{Binding ScoreNumber}"
+                     Maximum="{Binding NumberOfQuestions}"
                      Width="950"
                      Height="50"
                      Margin="10" />
-            <TextBlock Foreground="Black"
-                       FontSize="16"
+            <TextBlock Foreground="{Binding CorrectAnswersProgressBarForegroundBrush}"
+                       FontSize="24"
                        FontWeight="DemiBold"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">
@@ -99,12 +128,14 @@
         </Grid>
         <Grid>
             <ProgressBar x:Name="AllQuestionsProgressBar"
-                     Value="75"
+                     Value="{Binding AnsweredNumber}"
+                     Maximum="{Binding NumberOfQuestions}"
                      Foreground="Gray"
                      Width="950"
                      Height="50"
                      Margin="10" />
-            <TextBlock FontSize="16"
+            <TextBlock Foreground="{Binding AllQuestionsProgressBarForegroundBrush}"
+                       FontSize="24"
                        FontWeight="DemiBold"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">

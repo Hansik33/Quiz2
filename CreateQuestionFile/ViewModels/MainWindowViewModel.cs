@@ -193,7 +193,7 @@ namespace CreateQuestionFile.ViewModels
                 MessageBox.Show("Nie znaleziono folderu z pytaniami!" +
                     "\nZalecana jest reinstalacja oprogramowania.",
                     "Błąd krytyczny", MessageBoxButton.OK, MessageBoxImage.Error);
-                Application.Current.Shutdown();
+                System.Environment.Exit(0);
             }
         }
 

@@ -13,7 +13,7 @@ namespace Quiz2
         private void TurnOffApplicationClosingWindow(object obj, CancelEventArgs e)
         {
             e.Cancel = true;
-            Application.Current.Shutdown();
+            System.Environment.Exit(0);
         }
     }
 }

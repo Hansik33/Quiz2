@@ -14,7 +14,7 @@ namespace Quiz2.Views
         private void TurnOffApplicationClosingWindow(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
-            Application.Current.Shutdown();
+            System.Environment.Exit(0);
         }
     }
 }

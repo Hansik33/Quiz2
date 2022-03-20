@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace Quiz2
 {
@@ -7,6 +8,13 @@ namespace Quiz2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            this.DragMove();
         }
     }
 }

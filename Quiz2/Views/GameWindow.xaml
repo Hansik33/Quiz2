@@ -16,20 +16,32 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Window.Resources>
-        <ResourceDictionary Source="../ResourceDictionaries/CancelButtonStyleResourceDictionary.xaml" />
+        <ResourceDictionary Source="../ResourceDictionaries/MenuBarButtonsStyleResourceDictionary.xaml" />
     </Window.Resources>
     <Border Background="#454545"
             CornerRadius="20">
-        <StackPanel>
-            <Button Click="ClosingWindow"
-                    Command="{Binding GoToChangeCategoryViewCommand}"
-                    Style="{StaticResource CancelButtonStyle}"
-                    Margin="0,50,50,0">
-                <Button.Content>
-                    <svgc:SvgViewbox Source="/Icons/cancel.svg"
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                <Button Click="Minimize"
+                    Style="{StaticResource MenuBarButtonsStyle}"
+                    Margin="0,75,30,0" >
+                    <Button.Content>
+                        <svgc:SvgViewbox Source="/Icons/minimize.svg"
                                      Width="50" />
-                </Button.Content>
-            </Button>
+                    </Button.Content>
+                </Button>
+                <Button Click="ClosingWindow"
+                    Command="{Binding GoToChangeCategoryViewCommand}"
+                    Style="{StaticResource MenuBarButtonsStyle}"
+                    Margin="0,50,50,0">
+                    <Button.Content>
+                        <svgc:SvgViewbox Source="/Icons/cancel.svg"
+                                     Width="50" />
+                    </Button.Content>
+                </Button>
+            </StackPanel>
             <ContentControl Content="{Binding CurrentPageViewModel}" />
         </StackPanel>
     </Border>

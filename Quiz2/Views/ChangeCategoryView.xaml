@@ -15,7 +15,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../ResourceDictionaries/CustomScrollViewerStyleResourceDictionary.xaml" />
                 <ResourceDictionary Source="../ResourceDictionaries/ButtonsStyleResourceDictionary.xaml" />
-                <ResourceDictionary Source="../ResourceDictionaries/CancelButtonStyleResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

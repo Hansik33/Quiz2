@@ -18,7 +18,7 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../ResourceDictionaries/CancelButtonStyleResourceDictionary.xaml" />
+                <ResourceDictionary Source="../ResourceDictionaries/MenuBarButtonsStyleResourceDictionary.xaml" />
                 <ResourceDictionary Source="../ResourceDictionaries/TextBlockHyperLinkStyleResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -27,7 +27,7 @@
             CornerRadius="20">
         <StackPanel Margin="20">
             <Button Click="ClosingWindow"
-                        Style="{StaticResource CancelButtonStyle}">
+                        Style="{StaticResource MenuBarButtonsStyle}" Cursor="Hand">
                 <Button.Content>
                     <svgc:SvgViewbox Source="/Icons/cancel.svg"
                              Width="25" />

@@ -1,5 +1,6 @@
 ﻿using Quiz2.ViewModels;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Quiz2.Views
 {
@@ -9,6 +10,13 @@ namespace Quiz2.Views
         {
             InitializeComponent();
             DataContext = new InfoWindowViewModel();
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            this.DragMove();
         }
 
         private void ClosingWindow(object sender, RoutedEventArgs e)

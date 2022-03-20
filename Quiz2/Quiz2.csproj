@@ -12,6 +12,7 @@
     <None Remove="Icons\cancel.svg" />
     <None Remove="Icons\informations.svg" />
     <None Remove="Icons\joystick.svg" />
+    <None Remove="Icons\minimize.svg" />
     <None Remove="Icons\qanda.svg" />
   </ItemGroup>
 
@@ -25,6 +26,7 @@
     <Resource Include="Icons\cancel.svg" />
     <Resource Include="Icons\informations.svg" />
     <Resource Include="Icons\joystick.svg" />
+    <Resource Include="Icons\minimize.svg" />
     <Resource Include="Icons\qanda.svg" />
   </ItemGroup>
 

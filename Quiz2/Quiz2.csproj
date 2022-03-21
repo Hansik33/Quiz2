@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Icons\brain.svg" />
     <None Remove="Icons\cancel.svg" />
+    <None Remove="Icons\correct.svg" />
     <None Remove="Icons\informations.svg" />
     <None Remove="Icons\joystick.svg" />
     <None Remove="Icons\minimize.svg" />
@@ -24,6 +25,7 @@
   <ItemGroup>
     <Resource Include="Icons\brain.svg" />
     <Resource Include="Icons\cancel.svg" />
+    <Resource Include="Icons\correct.svg" />
     <Resource Include="Icons\informations.svg" />
     <Resource Include="Icons\joystick.svg" />
     <Resource Include="Icons\minimize.svg" />

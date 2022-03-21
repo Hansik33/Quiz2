@@ -14,19 +14,22 @@
         Height="812"
         Width="1024"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize"
+        Closing="TurnOffApplication">
     <Window.Resources>
         <ResourceDictionary Source="../ResourceDictionaries/MenuBarButtonsStyleResourceDictionary.xaml" />
     </Window.Resources>
     <Border Background="#454545"
-            CornerRadius="20">
+            CornerRadius="20"
+            BorderThickness="3"
+            BorderBrush="White">
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center">
                 <Button Click="Minimize"
                     Style="{StaticResource MenuBarButtonsStyle}"
-                    Margin="0,75,30,0" >
+                    Margin="0,75,30,0">
                     <Button.Content>
                         <svgc:SvgViewbox Source="/Icons/minimize.svg"
                                      Width="50" />

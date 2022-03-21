@@ -24,5 +24,10 @@ namespace Quiz2.Views
             this.Visibility = Visibility.Hidden;
             if (Application.Current.MainWindow != null) Application.Current.MainWindow.WindowState = WindowState.Normal;
         }
+
+        private void TurnOffApplication(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }

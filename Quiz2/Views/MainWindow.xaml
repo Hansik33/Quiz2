@@ -14,7 +14,8 @@
         Height="250"
         Width="300"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize"
+        Closing="TurnOffApplication">
     <Window.Resources>
         <Style x:Key="MainWindowMenuButtonsStyle"
                TargetType="Button">
@@ -44,7 +45,9 @@
         </Style>
     </Window.Resources>
     <Border Background="#454545"
-            CornerRadius="20">
+            CornerRadius="20"
+            BorderThickness="3"
+            BorderBrush="White">
         <StackPanel Margin="10">
             <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"

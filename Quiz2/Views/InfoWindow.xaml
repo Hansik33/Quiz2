@@ -14,7 +14,8 @@
         Height="250"
         Width="300"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize"
+        Closing="TurnOffApplication">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -24,7 +25,9 @@
         </ResourceDictionary>
     </Window.Resources>
     <Border Background="#454545"
-            CornerRadius="20">
+            CornerRadius="20"
+            BorderThickness="3"
+            BorderBrush="White">
         <StackPanel Margin="20">
             <Button Click="ClosingWindow"
                         Style="{StaticResource MenuBarButtonsStyle}" Cursor="Hand">

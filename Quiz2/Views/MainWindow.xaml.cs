@@ -16,5 +16,10 @@ namespace Quiz2
 
             this.DragMove();
         }
+
+        private void TurnOffApplication(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }

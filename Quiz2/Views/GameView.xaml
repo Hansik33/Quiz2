@@ -2,8 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:viewmodels="clr-namespace:Quiz2.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:GameViewModel}"
              mc:Ignorable="d"
@@ -61,23 +61,43 @@
                 <Button x:Name="AnswerAButton"
                     Command="{Binding AnswerQuestionCommand}"
                     Click="AnswerQuestion"
-                    Content="{Binding AnswerA}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
                     Foreground="White"
-                    FontSize="32"
                     FontWeight="DemiBold"
                     Width="475"
-                    Height="120" Cursor="Hand" />
+                    Height="120"
+                    Tag="{Binding AnswerA}">
+                    <Button.Content>
+                        <TextBlock Text="{Binding AnswerA}"
+                       Foreground="White"
+                       FontSize="32"
+                       FontWeight="DemiBold"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                    </Button.Content>
+                </Button>
                 <Button x:Name="AnswerBButton"
                     Command="{Binding AnswerQuestionCommand}"
                     Click="AnswerQuestion"
-                    Content="{Binding AnswerB}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
                     Foreground="White"
-                    FontSize="32"
                     FontWeight="DemiBold"
                     Width="475"
-                    Height="120" />
+                    Height="120"
+                    Tag="{Binding AnswerB}" Cursor="Hand">
+                    <Button.Content>
+                        <TextBlock Text="{Binding AnswerB}"
+                       Foreground="White"
+                       FontSize="32"
+                       FontWeight="DemiBold"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                    </Button.Content>
+                </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
@@ -85,23 +105,43 @@
                 <Button x:Name="AnswerCButton"
                     Command="{Binding AnswerQuestionCommand}"
                     Click="AnswerQuestion"
-                    Content="{Binding AnswerC}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
                     Foreground="White"
-                    FontSize="32"
                     FontWeight="DemiBold"
                     Width="475"
-                    Height="120" />
+                    Height="120"
+                    Tag="{Binding AnswerC}">
+                    <Button.Content>
+                        <TextBlock Text="{Binding AnswerC}"
+                       Foreground="White"
+                       FontSize="32"
+                       FontWeight="DemiBold"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                    </Button.Content>
+                </Button>
                 <Button x:Name="AnswerDButton"
                     Command="{Binding AnswerQuestionCommand}"
                     Click="AnswerQuestion"
-                    Content="{Binding AnswerD}"
                     Style="{StaticResource ChangeCategoryViewButtonsStyle}"
                     Foreground="White"
-                    FontSize="32"
                     FontWeight="DemiBold"
                     Width="475"
-                    Height="120" Cursor="Hand" />
+                    Height="120"
+                    Tag="{Binding AnswerD}" Cursor="Hand">
+                    <Button.Content>
+                        <TextBlock Text="{Binding AnswerD}"
+                       Foreground="White"
+                       FontSize="32"
+                       FontWeight="DemiBold"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                    </Button.Content>
+                </Button>
             </StackPanel>
         </StackPanel>
         <Grid>

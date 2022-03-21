@@ -29,5 +29,10 @@ namespace Quiz2.Views
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void TurnOffApplication(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }

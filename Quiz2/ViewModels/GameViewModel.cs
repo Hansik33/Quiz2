@@ -4,6 +4,7 @@ using Quiz2.Interfaces;
 using Quiz2.Models;
 using Quiz2.Patterns;
 using Quiz2.ViewModels.ViewModelBase;
+using Quiz2.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,13 +26,41 @@ namespace Quiz2.ViewModels
 
         private void AnswerQuestion(object obj)
         {
-            CheckAnswerCorrectness();
+            InformAboutAnswerCorrectness();
 
             ChangeProgressBarTextBlockForegroundColor();
 
             TryFinish();
 
             DrawAndAssignValues();
+        }
+
+        private void InformAboutAnswerCorrectness()
+        {
+            if (IsAnswerCorrect())
+            {
+                ScoreNumber++;
+
+                AnsweredNumber++;
+
+                File.WriteAllText("ISANSWERCORRECT.temp", "True");
+
+                var statusMessageBoxWindow = new StatusMessageBoxWindow();
+
+                statusMessageBoxWindow.ShowDialog();
+            }
+            else
+            {
+                AnsweredNumber++;
+
+                File.WriteAllText("ISANSWERCORRECT.temp", "False");
+
+                File.WriteAllText("CORRECTANSWER.temp", CorrectAnswer.ToString());
+
+                var statusMessageBoxWindow = new StatusMessageBoxWindow();
+
+                statusMessageBoxWindow.ShowDialog();
+            }
         }
 
         private bool ShouldFinishQuiz()
@@ -45,6 +74,11 @@ namespace Quiz2.ViewModels
             if (ShouldFinishQuiz())
             {
                 File.WriteAllText("EARNEDSCORE.temp", ScoreNumber.ToString());
+                File.WriteAllText("NUMBEROFQUESTIONS.temp", NumberOfQuestions.ToString());
+
+                var statusMessageBoxWindow = new StatusMessageBoxWindow();
+
+                statusMessageBoxWindow.ShowDialog();
 
                 GoToChangeCategoryView.Execute(null);
             }
@@ -59,15 +93,14 @@ namespace Quiz2.ViewModels
             if (resultAnswered == 0.5) AllQuestionsProgressBarForegroundBrush = Brushes.White;
         }
 
-        private void CheckAnswerCorrectness()
+        private bool IsAnswerCorrect()
         {
             var chosenAnswer = File.ReadAllText("CHOSENANSWER.temp");
 
             File.Delete("CHOSENANSWER.temp");
 
-            if (chosenAnswer == CorrectAnswer) ScoreNumber++;
-
-            AnsweredNumber++;
+            if (chosenAnswer == CorrectAnswer) return true;
+            else return false;
         }
 
         private bool DidThisQuestionUse(int id)

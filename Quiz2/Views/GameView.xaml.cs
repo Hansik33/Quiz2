@@ -16,7 +16,7 @@ namespace Quiz2.Views
         {
             var givenObject = sender as Button;
 
-            var chosenAnswer = givenObject.Content as string;
+            var chosenAnswer = givenObject.Tag as string;
 
             File.WriteAllText("CHOSENANSWER.temp", chosenAnswer);
         }

@@ -89,8 +89,8 @@ namespace Quiz2.ViewModels
             var resultScore = ((double)ScoreNumber / (double)NumberOfQuestions);
             var resultAnswered = ((double)AnsweredNumber / (double)NumberOfQuestions);
 
-            if (resultScore == 0.5) CorrectAnswersProgressBarForegroundBrush = Brushes.White;
-            if (resultAnswered == 0.5) AllQuestionsProgressBarForegroundBrush = Brushes.White;
+            if (resultScore >= 0.5) CorrectAnswersProgressBarForegroundBrush = Brushes.White;
+            if (resultAnswered >= 0.5) AllQuestionsProgressBarForegroundBrush = Brushes.White;
         }
 
         private bool IsAnswerCorrect()

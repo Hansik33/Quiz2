@@ -1,0 +1,98 @@
+{
+  "Informations": {
+    "CategoryTitle": "Język Polski",
+    "NumberOfQuestions": 10
+  },
+  "Packages": [
+    {
+      "ID": 1,
+      "Question": "Ile mamy części mowy?",
+      "AnswerA": "10.",
+      "AnswerB": "12.",
+      "AnswerC": "6.",
+      "AnswerD": "8.",
+      "CorrectAnswer": "10."
+    },
+    {
+      "ID": 2,
+      "Question": "Która część mowy jest nieodmienna?",
+      "AnswerA": "Przysłówek",
+      "AnswerB": "Rzeczownik",
+      "AnswerC": "Liczebnik",
+      "AnswerD": "Przymiotnik",
+      "CorrectAnswer": "Przysłówek"
+    },
+    {
+      "ID": 3,
+      "Question": "Ile mamy przypadków?",
+      "AnswerA": "7.",
+      "AnswerB": "5.",
+      "AnswerC": "9.",
+      "AnswerD": "8.",
+      "CorrectAnswer": "7."
+    },
+    {
+      "ID": 4,
+      "Question": "Jaki przypadek odpowiada na pytania: kogo? czego?",
+      "AnswerA": "Dopełniacz",
+      "AnswerB": "Mianownik",
+      "AnswerC": "Celownik",
+      "AnswerD": "Wołacz",
+      "CorrectAnswer": "Dopełniacz"
+    },
+    {
+      "ID": 5,
+      "Question": "Ile mamy części zdania?",
+      "AnswerA": "5.",
+      "AnswerB": "8.",
+      "AnswerC": "4.",
+      "AnswerD": "6.",
+      "CorrectAnswer": "5."
+    },
+    {
+      "ID": 6,
+      "Question": "Jaka część zdania jest przysłówkiem?",
+      "AnswerA": "Dopełnienie",
+      "AnswerB": "Okolicznik",
+      "AnswerC": "Orzeczenie",
+      "AnswerD": "Podmiot",
+      "CorrectAnswer": "Okolicznik"
+    },
+    {
+      "ID": 7,
+      "Question": "Jaka część zdania odpowiada na pytanie: co robi?",
+      "AnswerA": "Orzeczenie",
+      "AnswerB": "Dopełnienie",
+      "AnswerC": "Przydawka",
+      "AnswerD": "Okolicznik",
+      "CorrectAnswer": "Orzeczenie"
+    },
+    {
+      "ID": 8,
+      "Question": "Co to jest onomatopeja?",
+      "AnswerA": "Wyraz dźwiękonaśladowczy",
+      "AnswerB": "Wyraz pochodny",
+      "AnswerC": "Wyraz podstawowy",
+      "AnswerD": "Wyraz zapożyczony",
+      "CorrectAnswer": "Wyraz dźwiękonaśladowczy"
+    },
+    {
+      "ID": 9,
+      "Question": "Jak inaczej nazywa się międzyrostek?",
+      "AnswerA": "Interfiks",
+      "AnswerB": "Prefiks",
+      "AnswerC": "Sufiks",
+      "AnswerD": "Postfiks",
+      "CorrectAnswer": "Interfiks"
+    },
+    {
+      "ID": 10,
+      "Question": "Czym jest antonim?",
+      "AnswerA": "Wyrazem przeciwstawnym",
+      "AnswerB": "Wyraz dźwiękonaśladowczym",
+      "AnswerC": "Wyrazem bliskoznacznym",
+      "AnswerD": "Wyrazem pokrewnym",
+      "CorrectAnswer": "Wyrazem przeciwstawnym"
+    }
+  ]
+}

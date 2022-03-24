@@ -1,0 +1,98 @@
+{
+  "Informations": {
+    "CategoryTitle": "II Wojna Światowa",
+    "NumberOfQuestions": 10
+  },
+  "Packages": [
+    {
+      "ID": 1,
+      "Question": "Jak nazywała się tajna policja III Rzeszy?",
+      "AnswerA": "Hitlerjugend",
+      "AnswerB": "NSDAP",
+      "AnswerC": "Gestapo",
+      "AnswerD": "Waffen-SS",
+      "CorrectAnswer": "Gestapo"
+    },
+    {
+      "ID": 2,
+      "Question": "Jak nazywał się program badawczy, którego celem było stworzenie broni jądrowej?",
+      "AnswerA": "Projekt Bikini",
+      "AnswerB": "Projekt Nevada",
+      "AnswerC": "Projekt Manhattan",
+      "AnswerD": "Projekt Georgia",
+      "CorrectAnswer": "Projekt Manhattan"
+    },
+    {
+      "ID": 3,
+      "Question": "Jaki kryptonim nosiła bomba jądrowa zrzucona na Hiroszimę?",
+      "AnswerA": "Little Boy",
+      "AnswerB": "Car-bomba",
+      "AnswerC": "Castle Bravo",
+      "AnswerD": "Trinity",
+      "CorrectAnswer": "Little Boy"
+    },
+    {
+      "ID": 4,
+      "Question": "Ile dni trwała kampania wrześniowa?",
+      "AnswerA": "45. dni",
+      "AnswerB": "42. dni",
+      "AnswerC": "35. dni",
+      "AnswerD": "32. dni",
+      "CorrectAnswer": "35. dni"
+    },
+    {
+      "ID": 5,
+      "Question": "Jaka operacja nosiła kryptonim Barbarossa?",
+      "AnswerA": "Atak na kraje Beneluksu",
+      "AnswerB": "Niemiecka agresja na ZSRR",
+      "AnswerC": "Kampania norweska",
+      "AnswerD": "Bitwa o wyspę Okinawa",
+      "CorrectAnswer": "Niemiecka agresja na ZSRR"
+    },
+    {
+      "ID": 6,
+      "Question": "Kiedy zakończyła się II Wojna Światowa w Europie i w Azji?",
+      "AnswerA": "02.07 i 18.08 1945 r.",
+      "AnswerB": "14.06 i 22.12 1945 r.",
+      "AnswerC": "08.05 i 02.09 1945 r.",
+      "AnswerD": "06.04 i 01.10 1945 r. ",
+      "CorrectAnswer": "08.05 i 02.09 1945 r."
+    },
+    {
+      "ID": 7,
+      "Question": "Jak nazywał się minister propagandy III Rzeszy?",
+      "AnswerA": "Günther von Kluge",
+      "AnswerB": "Maximilian Reichsfreiherr von Weichs ",
+      "AnswerC": "Joseph Goebbels",
+      "AnswerD": "Hermann Göring",
+      "CorrectAnswer": "Joseph Goebbels"
+    },
+    {
+      "ID": 8,
+      "Question": "Co oznacza swastyka, która została użyta przez Adolfa Hitlera?",
+      "AnswerA": "Śmierć",
+      "AnswerB": "Szczęście",
+      "AnswerC": "Jedność",
+      "AnswerD": "Potęgę",
+      "CorrectAnswer": "Szczęście"
+    },
+    {
+      "ID": 9,
+      "Question": "Co uratowało Adolfa Hitlera podczas zamachu 20 lipca?",
+      "AnswerA": "Masywny, dębowy stół",
+      "AnswerB": "Zamknięte okna",
+      "AnswerC": "Niewypał",
+      "AnswerD": "Spóźnienie na spotkanie",
+      "CorrectAnswer": "Masywny, dębowy stół"
+    },
+    {
+      "ID": 10,
+      "Question": "Który polityk nadał sobie tytuł Il Duce?",
+      "AnswerA": "Benito Mussolini",
+      "AnswerB": "Philippe Pétain",
+      "AnswerC": "Francisco Franco",
+      "AnswerD": "Miklós Horthy",
+      "CorrectAnswer": "Benito Mussolini"
+    }
+  ]
+}

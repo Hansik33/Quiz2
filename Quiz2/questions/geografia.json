@@ -1,0 +1,98 @@
+{
+  "Informations": {
+    "CategoryTitle": "Geografia",
+    "NumberOfQuestions": 10
+  },
+  "Packages": [
+    {
+      "ID": 1,
+      "Question": "Jakie jest 10. co do wielkości państwo świata?",
+      "AnswerA": "Kazachstan",
+      "AnswerB": "Algieria",
+      "AnswerC": "Arabia Saudyjska",
+      "AnswerD": "Meksyk",
+      "CorrectAnswer": "Algieria"
+    },
+    {
+      "ID": 2,
+      "Question": "Z iloma państwami graniczy Polska?",
+      "AnswerA": "Z 8.",
+      "AnswerB": "Z 7.",
+      "AnswerC": "Z 6.",
+      "AnswerD": "Z 5.",
+      "CorrectAnswer": "Z 7."
+    },
+    {
+      "ID": 3,
+      "Question": "Jaki język jest językiem urzędowym w Brazylii?",
+      "AnswerA": "Brazylijski",
+      "AnswerB": "Portugalski",
+      "AnswerC": "Hiszpański",
+      "AnswerD": "Francuski",
+      "CorrectAnswer": "Portugalski"
+    },
+    {
+      "ID": 4,
+      "Question": "Jak nazywa się stolica Chorwacji?",
+      "AnswerA": "Zagrzeb",
+      "AnswerB": "Zadar",
+      "AnswerC": "Lublana",
+      "AnswerD": "Belgrad",
+      "CorrectAnswer": "Zagrzeb"
+    },
+    {
+      "ID": 5,
+      "Question": "Jaka jest największa wyspa na świecie?",
+      "AnswerA": "Grenlandia",
+      "AnswerB": "Madagaskar",
+      "AnswerC": "Wielka Brytania",
+      "AnswerD": "Borneo",
+      "CorrectAnswer": "Grenlandia"
+    },
+    {
+      "ID": 6,
+      "Question": "Z ilu królestw/prowincji składa się UK?",
+      "AnswerA": "Z 6.",
+      "AnswerB": "Z 4.",
+      "AnswerC": "Z 3.",
+      "AnswerD": "Z 2.",
+      "CorrectAnswer": "Z 4."
+    },
+    {
+      "ID": 7,
+      "Question": "Który kraj NIE ma dostępu do Adriatyku?",
+      "AnswerA": "Włochy",
+      "AnswerB": " Słowenia",
+      "AnswerC": " Albania",
+      "AnswerD": "Serbia",
+      "CorrectAnswer": "Serbia"
+    },
+    {
+      "ID": 8,
+      "Question": "Jak nazywa się kontynent, na którym znajduje się biegun południowy?",
+      "AnswerA": "Arktyka",
+      "AnswerB": "Antarktyda",
+      "AnswerC": "Antarktyka",
+      "AnswerD": "Atlantyda",
+      "CorrectAnswer": "Antarktyda"
+    },
+    {
+      "ID": 9,
+      "Question": "Które państwo NIE graniczy z Chile?",
+      "AnswerA": "Paragwaj",
+      "AnswerB": "Peru",
+      "AnswerC": "Argentyna",
+      "AnswerD": "Boliwia",
+      "CorrectAnswer": "Paragwaj"
+    },
+    {
+      "ID": 10,
+      "Question": "Od którego kraju zależna jest Grenlandia?",
+      "AnswerA": "Od Danii",
+      "AnswerB": "Od USA",
+      "AnswerC": "Od Kanady",
+      "AnswerD": "Od Norwegii",
+      "CorrectAnswer": "Od Danii"
+    }
+  ]
+}

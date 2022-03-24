@@ -1,0 +1,98 @@
+{
+  "Informations": {
+    "CategoryTitle": "XX-Lecie Międzywojenne",
+    "NumberOfQuestions": 10
+  },
+  "Packages": [
+    {
+      "ID": 1,
+      "Question": "Czym był Anschluss?",
+      "AnswerA": "Aneksją Austrii",
+      "AnswerB": "Pogromem Żydów",
+      "AnswerC": "Nazistowską młodzieżówką",
+      "AnswerD": "Aneksją Czechosłowacji",
+      "CorrectAnswer": "Aneksją Austrii"
+    },
+    {
+      "ID": 2,
+      "Question": "Jakiego regionu dotyczył układ monachijski?",
+      "AnswerA": "Kraju Sudetów",
+      "AnswerB": "Nadrenii",
+      "AnswerC": "Okręgu Kłajpedy",
+      "AnswerD": "Sycylii",
+      "CorrectAnswer": "Kraju Sudetów"
+    },
+    {
+      "ID": 3,
+      "Question": "Kto wygrał hiszpańską wojnę domową?",
+      "AnswerA": "Republikanie",
+      "AnswerB": "Nacjonaliści",
+      "AnswerC": "Anarchiści",
+      "AnswerD": "Socjaliści",
+      "CorrectAnswer": "Nacjonaliści"
+    },
+    {
+      "ID": 4,
+      "Question": "W którym roku miała miejsce remilitaryzacja Nadrenii?",
+      "AnswerA": "W 1936r.",
+      "AnswerB": "W 1933r.",
+      "AnswerC": "W 1939r.",
+      "AnswerD": "W 1938r.",
+      "CorrectAnswer": "W 1936r."
+    },
+    {
+      "ID": 5,
+      "Question": "Czyjej prowokacji przykładem jest Incydent na moście Marco Polo?",
+      "AnswerA": "Japońskiej",
+      "AnswerB": "Chińskiej",
+      "AnswerC": "Włoskiej",
+      "AnswerD": "Hiszpańskiej",
+      "CorrectAnswer": "Japońskiej"
+    },
+    {
+      "ID": 6,
+      "Question": "Który kraj był znany ze swojej polityki izolacjonizmu?",
+      "AnswerA": "USA",
+      "AnswerB": "Francja",
+      "AnswerC": "Australia",
+      "AnswerD": "RPA",
+      "CorrectAnswer": "USA"
+    },
+    {
+      "ID": 7,
+      "Question": "Kto zdobył władzę po przeprowadzeniu Marszu na Rzym?",
+      "AnswerA": "Benito Mussolini",
+      "AnswerB": "Wiktor Emanuel III",
+      "AnswerC": "Emilio De Bono",
+      "AnswerD": "Italo Balbo",
+      "CorrectAnswer": "Benito Mussolini"
+    },
+    {
+      "ID": 8,
+      "Question": "Kto razem z Adolfem Hitlerem brał udział w puczu monachijskim?",
+      "AnswerA": "Erich Ludendorff",
+      "AnswerB": "Otto von Lossow",
+      "AnswerC": "Hans von Seißer",
+      "AnswerD": "Gustav von Kahr",
+      "CorrectAnswer": "Erich Ludendorff"
+    },
+    {
+      "ID": 9,
+      "Question": "Na jakiej giełdzie miał miejsce krach, który zapoczątkował wielki kryzys?",
+      "AnswerA": "Na giełdzie nowojorskiej",
+      "AnswerB": "Na giełdzie londyńskiej",
+      "AnswerC": "Na giełdzie paryskiej",
+      "AnswerD": "Na giełdzie warszawskiej",
+      "CorrectAnswer": "Na giełdzie nowojorskiej"
+    },
+    {
+      "ID": 10,
+      "Question": "Jaka bitwa jest nazywana Cudem nad Wisłą?",
+      "AnswerA": "Bitwa Warszawska",
+      "AnswerB": "Bitwa pod Grunwaldem",
+      "AnswerC": "Bitwa pod Wiedniem",
+      "AnswerD": "Bitwa pod Chocimiem",
+      "CorrectAnswer": "Bitwa Warszawska"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 Written in C# with WPF API and MVVM pattern. \
 Choose your favourite category and answer correctly as many as possible questions. \
 Learn lots of new informations about world and history. \
-NEW POSSIBILITY: In this version you may add your own category file. \
+NEW POSSIBILITY: In this version you may add your own category file. 
 ## Download
 - https://drive.google.com/file/d/1PkH4-V7Q0CawLwIc5Qz48qyxO85RsPi4/view?usp=sharing
 ## Screenshots

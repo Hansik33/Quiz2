@@ -1,0 +1,98 @@
+{
+  "Informations": {
+    "CategoryTitle": "Ruda Śląska",
+    "NumberOfQuestions": 10
+  },
+  "Packages": [
+    {
+      "ID": 1,
+      "Question": "Gdzie znajdowała się nieistniejąca już synagoga?",
+      "AnswerA": "W Wirku",
+      "AnswerB": "W Goduli",
+      "AnswerC": "W Orzegowie",
+      "AnswerD": "W Halembie",
+      "CorrectAnswer": "W Wirku"
+    },
+    {
+      "ID": 2,
+      "Question": "W którym roku Czarny Las stał się odrębną dzielnicą?",
+      "AnswerA": "W 2006r.",
+      "AnswerB": "W 2004r.",
+      "AnswerC": "W 2005r.",
+      "AnswerD": "W 2007.",
+      "CorrectAnswer": "W 2006r."
+    },
+    {
+      "ID": 3,
+      "Question": "Gdzie znajduje się parafia pw. Ścięcia św. Jana Chrzciciela?",
+      "AnswerA": "W Goduli",
+      "AnswerB": "W Bielszowicach",
+      "AnswerC": "W Nowym Bytomiu",
+      "AnswerD": "W Halembie",
+      "CorrectAnswer": "W Goduli"
+    },
+    {
+      "ID": 4,
+      "Question": "Z ilu dzielnic zosał wyodrębniony Czarny Las?",
+      "AnswerA": "Z 3.",
+      "AnswerB": "Z 2.",
+      "AnswerC": "Z 4.",
+      "AnswerD": "Z 5.",
+      "CorrectAnswer": "Z 3."
+    },
+    {
+      "ID": 5,
+      "Question": "Z iloma miastami graniczy Ruda Śląska?",
+      "AnswerA": "Z 6.",
+      "AnswerB": "Z 5.",
+      "AnswerC": "Z 7. ",
+      "AnswerD": "Z 8.",
+      "CorrectAnswer": "Z 6."
+    },
+    {
+      "ID": 6,
+      "Question": "Jaka jest największa dzielnica Rudy Śląskiej?",
+      "AnswerA": "Halemba",
+      "AnswerB": "Kochłowice",
+      "AnswerC": "Bielszowice",
+      "AnswerD": "Ruda",
+      "CorrectAnswer": "Halemba"
+    },
+    {
+      "ID": 7,
+      "Question": "Jaka jest najmniejsza dzielnica Rudy Śląskiej?",
+      "AnswerA": "Czarny Las ",
+      "AnswerB": "Bykowina",
+      "AnswerC": "Chebzie",
+      "AnswerD": "Orzegów",
+      "CorrectAnswer": "Czarny Las "
+    },
+    {
+      "ID": 8,
+      "Question": "Gdzie znajduje się staw Glombik?",
+      "AnswerA": "W Goduli",
+      "AnswerB": "W Orzegowie",
+      "AnswerC": "W Rudzie",
+      "AnswerD": "W Nowym Bytomiu",
+      "CorrectAnswer": "W Goduli"
+    },
+    {
+      "ID": 9,
+      "Question": "Z połączenia jakich miast powstała Ruda Śląska?",
+      "AnswerA": "Ruda i Nowy Bytom",
+      "AnswerB": "Ruda i Halemba",
+      "AnswerC": "Ruda i Godula",
+      "AnswerD": "Ruda i Bielszowice",
+      "CorrectAnswer": "Ruda i Nowy Bytom"
+    },
+    {
+      "ID": 10,
+      "Question": "W którym roku została utworzona Ruda Śląska?",
+      "AnswerA": "W 1959r.",
+      "AnswerB": "W 1954r.",
+      "AnswerC": "W 1962r.",
+      "AnswerD": "W 1965r.",
+      "CorrectAnswer": "W 1959r."
+    }
+  ]
+}
